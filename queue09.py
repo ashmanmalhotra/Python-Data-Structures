@@ -41,8 +41,18 @@ class PriorityQueue:
             self.queue.append(item)
             self.queue.sort()
 
+    def setPriority(self, priority="low"):
+        """
+        priority: high | low
+                    high: The items with higher value will be piroritised.
+                    low: The items with lower value will be piroritised.
+        """
+        self.__priority = priority
+
+
 
 obj = PriorityQueue(priority="high")
+
 
 # Test: Whether the Queue is Empty?
 print("Queue is Empty") if obj.isEmpty() == True else print("Queue is Not Empty")
@@ -68,6 +78,11 @@ obj.enqueue(9)
 
 # Print the element after Enqueue Operation
 print("Elements after Enqueue Operation: ", obj.queue)
+
+#########################################################
+#   Setting Prioroty to Low in the midd of the program
+#########################################################
+obj.setPriority(priority="low")
 
 # Test: Whether the Queue is Empty?
 print("Queue is Empty") if obj.isEmpty() == True else print("Queue is Not Empty")
