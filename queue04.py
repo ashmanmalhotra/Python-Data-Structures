@@ -43,3 +43,10 @@ objqueue.dequeue()
 objqueue.dequeue()
 
 print(objqueue.queue)
+
+objqueue.enqueue(12)
+result = objqueue.dequeue()
+if result is None:
+    print("Nothing to Dequeue.")
+else:
+    print("Dequeued Item: ", result)
